@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"os"
-	"time"
 
 	"github.com/gdamore/tcell/v2" // permet de crée une interface utlisateur
 )
@@ -33,18 +32,5 @@ func main() {
 			}
 
 		}
-	}
-}
-func Run(screen tcell.Screen, defStyle tcell.Style) {
-	x := 0
-	for {
-		screen.Clear()
-		screen.SetContent(x,10, 'H', nil, defStyle)
-		screen.SetContent(x+1, 10, 'i', nil, defStyle)
-		screen.SetContent(x+2, 10, '!', nil, defStyle)
-
-		screen.Show()
-		time.Sleep(40 * time.Millisecond)
-		x++
 	}
 }
